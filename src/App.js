@@ -9,12 +9,19 @@ class App extends Component {
       list: ['Javascript', 'CSS', 'HTLM', 'React']
     }
   }
+
+  
+
   render() {
     return (
       <div style={styles.container}>
         <h1 style={styles.title}>Las tecnologias del Front</h1>
         <ul style={styles.list}>
-          {/* Tu codigo va aca */}
+          {
+            this.state.list.map((element) => {
+              return( <li key={element}>{element}</li>)
+            })
+          }
         </ul>
       </div>
     );
